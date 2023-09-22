@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title> DAAP </title>
+	<title> Earthquakes </title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -18,6 +18,11 @@
 			left: 3rem;
 			right: 3rem;
 		} */
+
+		html{
+			scroll-behavior: smooth;
+		}
+
 		.footer
 		{
 			background-color: #001222;
@@ -216,7 +221,16 @@
 			flex-direction: row;
 			height: 550px;
 			width: 72.1rem;
-			margin: 3rem 0 2rem 0;
+			margin: -70px 0 2rem 0;
+		}
+
+		.last{
+			/* background-color: rgba(179, 233, 255, 0.432); */
+			display: flex;
+			flex-direction: row;
+			height: 550px;
+			width: 72.1rem;
+			margin: 3rem 0 0rem 0;
 		}
 
 		.vl{
@@ -231,9 +245,6 @@
 <body>
 	<header class="p-3 text-bg-dark gradient-background">
 		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-		<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-			<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-		</a>
 	
 			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 			  <li><a href="index.html#home" class="nav-link px-2 text-white">Home</a></li>
@@ -249,7 +260,7 @@
 			  </li>
 			  <li><a href="index.html#donate" class="nav-link px-2 text-white">Donate</a></li>
 			  <!-- <li><a href="#" class="nav-link px-2 text-white"></a></li> -->
-			  <li><a href="index.html#about" class="nav-link px-2 text-white">About</a></li>
+			  <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
 			  <li><a href="#causes" class="nav-link px-2 text-white">Causes</a></li>
 			  <li><a href="#preventions" class="nav-link px-2 text-white">Preventions</a></li>
 			  <!-- <li><h1>D-APP</h1></li> -->
@@ -270,6 +281,9 @@
 		  </div>
 	</header>
 
+	<a href="https://t.me/DAAP31_BOT" class="bot" style="display: flex; flex-direction: column; align-items: end; justify-content: right; margin: 0.4rem 1rem 0 0; position: sticky; top: 0; bottom: -1px; ">
+		<img src="bot.png" role="button" style="height: 100px; width: 100px; margin-bottom: 0; border-radius: 1rem; border: none;">
+	</a>
 	<div class="heading">
 		<h1 style="text-align: left; margin: 7rem 3rem 1rem 3rem;">Earthquakes</h1>
 		<div class="vl"></div>
@@ -384,16 +398,28 @@
 		</div>
 	</div>
 
-	<div class="bottom gradient-background">
-		<div class="container1">
-		<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
-			<h2>Contact Us</h2>
-			<input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="off">
-			<input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
-			<textarea id="message" rows="5" name="message" placeholder="How can we help you?" required autocomplete="off"></textarea>
-			<button type="submit">Submit</button>
-		</form>
-		<footer><h6 style="margin-bottom: 0px;">© D-APP 2023</h4></footer>
+	<div class="last gradient-background">
+		<div class="bottom" style="margin: 0; padding: 0;">
+		  <div class="container1">
+			<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
+			  <h2>Contact Us</h2>
+			  <input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="off">
+			  <input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
+			  <textarea id="message" rows="5" name="message" placeholder="How can we help you?" required autocomplete="off"></textarea>
+			  <button type="submit">Submit</button>
+			</form>
+			<footer><h6 style="margin-bottom: 0px; text-align: center;">© d-ऐPP 2023</h6></footer>
+		  </div>
+		</div>
+		<div class="vl"></div>
+		<div style="display: flex; flex-direction: column;">
+		  <section id="about" >
+			<h2 style="color: rgb(41, 70, 143); margin-top: 1rem;" >About Us</h2>
+			<div class="box gradient-background container" style="width: 150px; margin-left: 0;"></div>
+			<p style="margin: 1rem 1rem 1rem 0rem;" data-aos="fade-right">Our team aims to provide the users with information related to various natural disasters including their causes, prevention techniques and warning systems to have everything prepared in advance for the D-DAY. 
+			  Through our application we also provide users with the safety measures that must be taken during the time of disaster. We have also elaborated on what has to be done before and after a disaster. It also provides the mapping of the nearest rescue centers. To avoid panic due to low internet connectivity that a person might face during a disaster we have provided the offline map system. 
+			  We are a team of 6 and this is a demo website developed for the SIH hackathon.</p>
+		  </section>
 		</div>
 	</div>
 
