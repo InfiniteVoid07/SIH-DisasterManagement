@@ -12,20 +12,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      backgroundColor: Colors.blue,
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            //sized box to lower down The App title
+            SizedBox(
+              height: 30.0,
+            ),
             Container(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(12.0),
               child: Text(
-                'D-App',
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                'd-ऐPP',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             // Earthquake card
             Disaster(
-                photo: AssetImage("Images/earthquake.jpg"),
+                photo: AssetImage("Images/earthquake-3.jpg"),
                 txt: "Earthquake",
                 txtroute: () {
                   Navigator.pushNamed(context, "/3rd");
@@ -51,6 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 txtroute: () {
                   Navigator.pushNamed(context, "/5th");
                 }),
+            // Tornado card
+            Disaster(
+                photo: AssetImage("Images/tornado.jpg"),
+                txt: "Tornado",
+                txtroute: () {
+                  Navigator.pushNamed(context, "/6th");
+                })
           ],
         ),
       ),

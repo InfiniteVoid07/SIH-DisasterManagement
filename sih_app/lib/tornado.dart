@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Earthquake extends StatelessWidget {
-  const Earthquake({super.key});
+class Tornado extends StatelessWidget {
+  const Tornado({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class Earthquake extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "Earthquake",
+          "Tornado",
           style: TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
@@ -17,7 +17,6 @@ class Earthquake extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -25,13 +24,13 @@ class Earthquake extends StatelessWidget {
           children: [
             // Card with an image
             Card(
-              child: Image.asset("Images/earthquake-1.jpg"),
+              child: Image.asset("Images/tornado-2.jpg"),
             ),
-            // Card with a description of an earthquake
+            // Card with a description of a tornado
             Card(
               child: Text(
-                "Earthquake is a sudden shaking of the ground caused by the movement of rock beneath the surface of the Earth. Earthquakes can range in intensity from a barely noticeable tremor to a violent shaking that can destroy entire cities.",
-                style: TextStyle(fontSize: 22.0),
+                "A tornado is a rapidly rotating column of air that extends from a thunderstorm to the ground. Tornadoes can also cause significant damage to property and infrastructure, and they can lead to loss of life.",
+                style: TextStyle(fontSize: 20.0),
               ),
             ),
           ],

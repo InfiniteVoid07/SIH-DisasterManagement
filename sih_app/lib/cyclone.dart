@@ -5,6 +5,37 @@ class Cyclone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text(
+          "Cyclone",
+          style: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Card with an image
+            Card(
+              child: Image.asset("Images/cyclone-2.jpg"),
+            ),
+            // Card with a description of a cyclone
+            Card(
+              child: Text(
+                "A cyclone is a rapidly rotating storm system that originates over tropical oceans. It is characterized by a low-pressure center, strong winds, and heavy rain.",
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
