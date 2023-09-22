@@ -46,3 +46,27 @@ class _DisasterState extends State<Disaster> {
     );
   }
 }
+
+class ImageImport extends StatelessWidget {
+  final double vp, hp, re;
+  final ImageProvider? photo;
+
+  const ImageImport(
+      {required this.vp,
+      required this.hp,
+      required this.re,
+      required this.photo});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: vp, horizontal: hp),
+      child: Card(
+          color: Colors.black,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(re),
+            child: Image(image: photo!),
+          )),
+    );
+  }
+}

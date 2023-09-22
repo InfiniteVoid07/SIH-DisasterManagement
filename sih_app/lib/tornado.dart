@@ -33,6 +33,100 @@ class Tornado extends StatelessWidget {
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
+            // Heading
+            const SizedBox(height: 10),
+            const Text(
+              "Do's",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            // Card with two cards inside
+            Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Card on the left side covering 40% of the screen
+                  Card(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("Images/earthquake-2.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // Card on the right side covering 60% of the screen
+                  Expanded(
+                    child: Card(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.6,
+                            child: const Flexible(
+                              flex: 1,
+                              child: Text(
+                                "Get Good bhai",
+                                style: TextStyle(fontSize: 20.0),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            //Heading
+            const SizedBox(height: 10),
+            const Text(
+              "Don't",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            // Card with two cards inside
+            Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Card on the left side covering 40% of the screen
+                  Card(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("Images/earthquake-2.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // Card on the right side covering 60% of the screen
+                  Expanded(
+                    child: Card(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.6,
+                            child: const Flexible(
+                              flex: 1,
+                              child: Text(
+                                "Get even more good",
+                                style: TextStyle(fontSize: 20.0),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
