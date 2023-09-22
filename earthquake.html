@@ -1,0 +1,412 @@
+<html>
+
+<head>
+	<title> DAAP </title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+	<style> 
+		.header
+		{
+			background-color:  black;
+
+			color: white;
+			text-align: center;
+		}
+		/* h1{
+			position: relative;
+			left: 3rem;
+			right: 3rem;
+		} */
+		.footer
+		{
+			background-color: #001222;
+			color: white;
+			text-align: right;
+		}
+		.section
+		{
+			padding: 50px;
+		}	
+		/* .vl
+		{
+  			border-block: 5px solid navy;
+  			height: 300px;
+  		} */
+
+		.container{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.gradient-background{
+			background: linear-gradient(300deg, #adf7f2, #15aaff);
+			background-size: 100% 100%;
+			animation: gradient-animation 18s ease infinite;
+		}
+
+		@keyframes gradient-animation {
+			0% {
+			background-position: 0% 50%;
+			}
+			50% {
+			background-position: 100% 50%;
+			}
+			100% {
+			background-position: 0% 50%;
+			}
+		}
+
+		.collapsible{
+			max-width: 900px;
+			overflow: hidden;
+			font-weight: 500;
+			margin-top: 1rem;
+		}
+
+		.collapsible input{
+			display: none;
+		}
+
+		.collapsible label{
+			position: relative;
+			font-weight: 600;
+			background-color: white;
+			box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+			color: #1c1c6b;
+			display: block;
+			margin-bottom: 0.8rem;
+			cursor: pointer;
+			padding: 1rem;
+			border-radius: 0.3rem;
+			z-index: 1;
+			margin-left: 1rem;
+		}
+
+		.collapsible img{
+			float: right;
+		}
+
+		.collapsible ul{
+			display: inline-block;
+			text-align: justify;
+		}
+
+		.collapsible label::after{
+			content: "";
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			width: 1.2rem;
+			height: 1.2rem;
+			/* image-rendering: url(arrow.svg) no-repeat 0 0; */
+			transition: all 0.3s ease;
+		}
+
+		svg{
+			transform: rotate(90deg);
+		}
+
+		.collapsible .a1{
+			margin-left: 37rem;
+		}
+
+		.collapsible .a2{
+			margin-left: 41.25rem;
+		}
+
+		.collapsible .a3{
+			margin-left: 41rem;
+		}
+
+		.collapsible .a4{
+			margin-left: 34rem;
+		}
+
+		.collapsible input .collapsible-head1:checked + label::after{
+			transform: rotate(90deg);
+		}
+
+		.collapsible-text{
+			max-width:max-content;
+			max-height: 1px;
+			overflow: hidden;
+			border-radius: 4px;
+			line-height: 1.4;
+			position: relative;
+			top: -100%;
+			opacity: 0.5;
+			/* box-sizing: 500px; */
+			transition: all 0.3s ease;
+		}
+
+		.collapsible input:checked ~ .collapsible-text{
+			max-height: 500px;
+			margin: 1rem 1rem;
+			/* padding-bottom: 1.5rem 1.5rem; */
+			background: white;
+			box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+			opacity: 1;
+			top: 0;
+		}
+
+		.collapsible-text li{
+			margin: 1rem 1rem;
+			text-align: justify;
+			/* padding-left: 1rem;
+			padding-right: 1rem; */
+		}
+
+		.form2{
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			width: 28rem;
+			margin: 50px 10rem 20px 10px;
+			border-radius: 1rem;
+			text-align: center;
+		}
+
+		form h2{
+			margin-top: 10px 11rem 1rem;
+			color: black;
+		}
+
+		form input, form textarea{
+			width: 25rem;
+			margin: 20px 100px 0 20px;
+			border: none;
+			border-radius: 0.6rem;
+			outline: none;
+			padding: 10px;
+		}
+
+		form button{
+			width: 5rem;
+			border-radius: 0.4rem;
+			background-color: white;
+			color: black;
+			margin: 2rem 11.25rem 2rem;
+			cursor: pointer;
+			border: none;
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+		}
+
+		.box{
+			width: 10rem;
+			height: 10px;
+			margin: 0.2rem 1rem;
+			text-align: left;
+		}
+
+		.container1{
+			margin-top: 10px;
+			padding: 1rem 1rem;
+		}
+
+		.container2{
+			text-align: center;
+			margin: 50px 100px 40px 0;
+		}
+		
+		.heading{
+			background-color: rgba(179, 233, 255, 0.432);
+			display: flex;
+			flex-direction: row;
+			height: 550px;
+			width: 72.1rem;
+			margin: 3rem 0 2rem 0;
+		}
+
+		.vl{
+			height: 550px;
+			width: 1px;
+			background-color: grey;
+			margin: 0 2rem 2rem 2rem;
+		}
+
+	</style>
+
+<body>
+	<header class="p-3 text-bg-dark gradient-background">
+		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+		<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+			<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+		</a>
+	
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+			  <li><a href="index.html#home" class="nav-link px-2 text-white">Home</a></li>
+			  <li class="nav-item dropdown"><a href="#disaster" class="nav-link px-2 text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="flood.html">Floods</a></li>
+				  <li><a class="dropdown-item" href="earthquake.html">Earthquakes</a></li>
+				  <li><a class="dropdown-item" href="#">Cyclones</a></li>
+				  <li><a class="dropdown-item" href="#">Landslides</a></li>
+				  <!-- <li><hr class="dropdown-divider"></li>
+				  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+				</ul>
+			  </li>
+			  <li><a href="index.html#donate" class="nav-link px-2 text-white">Donate</a></li>
+			  <!-- <li><a href="#" class="nav-link px-2 text-white"></a></li> -->
+			  <li><a href="index.html#about" class="nav-link px-2 text-white">About</a></li>
+			  <li><a href="#causes" class="nav-link px-2 text-white">Causes</a></li>
+			  <li><a href="#preventions" class="nav-link px-2 text-white">Preventions</a></li>
+			  <!-- <li><h1>D-APP</h1></li> -->
+			</ul>
+			
+			<form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+			  <input type="search" id="search" list="input" class="form-control form-control-dark text-bg-light" placeholder="Search here" aria-label="Search" color="white" autocomplete="off">
+			  <datalist id="input">
+				<option value="Floods" onclick="submit()">Floods</option>
+				<option value="Earthquakes">Earthquakes</option>
+				<option value="Cyclones">Cyclones</option>
+				<option value="Landslides">Landslides</option>
+				<option value="Disasters"5><a href="#disaster">Disasters</a></option>
+				<option value="Donate"><a href="#donate">Donate</a></option>
+				<option value="About"><a href="#about">About</a></option>
+			  </datalist>
+			</form>
+		  </div>
+	</header>
+
+	<div class="heading">
+		<h1 style="text-align: left; margin: 7rem 3rem 1rem 3rem;">Earthquakes</h1>
+		<div class="vl"></div>
+		<div style="display: flex; flex-direction: column;">
+			<div style="display: flex; flex-direction: row;">
+				<p style="float: right; margin: 2.5rem 0.5rem 1rem 5rem;">An earthquake is when the ground shakes and moves because of energy released deep within the Earth. Imagine if you were holding a big rubber ball and suddenly squeezed it really hard and then let go. The ball would bounce and shake. That's kind of like what happens inside the Earth during an earthquake. This shaking can be strong or gentle, and it can sometimes cause damage to buildings and the land. Earthquakes are caused by the Earth's crust, which is like a big puzzle, breaking apart or sliding past each other.</p>
+				<img src="https://jotscroll.com/images/forums-posts-images/1541589947-Earthquakes-Images.jpg" alt="Image 4" width="200px" height="200px" style="float: right; margin: 4rem 5rem 2rem 0.5rem;"/>
+			</div>
+			<div style="display: flex; flex-direction: column;">
+				<img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2022/11/supershear-earthquakes-800x450.jpg" alt="Image 3" width="450px" height="200px" style="margin: 1rem 5rem 2rem 7rem;"/>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="causes">
+		<b><h2 style="color: rgb(41, 70, 143); margin: 3rem 1rem 0 1rem;">Causes of Earthquakes</h2></b>
+		<div class="box gradient-background" style="width: 350px;"></div> 
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head1">
+			<label for="collapsible-head1">1. Tectonic Plate Movements<svg xmlns="http://www.w3.org/2000/svg" class="a1" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Divergent Boundaries: When tectonic plates move away from each other, such as along mid-ocean ridges, tensional forces can build up and lead to earthquakes.</li>
+					<img src="https://www.researchgate.net/publication/305782020/figure/fig1/AS:508759652790272@1498309161471/Schematic-representation-of-the-three-types-of-plate-boundaries-convergent-top.png" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+					<li>Convergent Boundaries: When two tectonic plates collide or move toward each other, compressional forces can cause the Earth's crust to buckle and generate earthquakes. Subduction zones, where one plate is forced beneath another, are common locations for powerful earthquakes.</li>
+					<li>Transform Boundaries: Along transform boundaries, two plates slide past each other horizontally. The friction between the plates can cause them to become locked. When the stress overcomes the friction, it results in sudden movement and earthquakes.</li>
+				</ul>
+				
+			</div>
+		</div>
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head2">
+			<label for="collapsible-head2">2. Volcanic Activity<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a2"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Earthquakes can occur in volcanic regions due to the movement of magma beneath the Earth's surface. These are often referred to as volcanic earthquakes and can be associated with volcanic eruptions.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head3">
+			<label for="collapsible-head3">3. Human Activities<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a3"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Human activities, such as mining, reservoir-induced seismicity (caused by filling large reservoirs), hydraulic fracturing (fracking), and geothermal energy extraction, can induce earthquakes. These are known as induced seismicity or anthropogenic earthquakes.</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head4">
+			<label for="collapsible-head4">4. Stress Accumulation and Release<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a4"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Over time, stress accumulates along geological faults and plate boundaries as tectonic plates continue to move.
+						When the stress exceeds the strength of the rocks, it is suddenly released as seismic energy, causing an earthquake.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="preventions">
+		<h2 style="color: rgb(41, 70, 143); margin: 2rem 1rem 0 1rem;">Earthquake Prevention</h2>
+		<div class="box gradient-background" style="width: 350px;"></div>
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head5">
+			<label for="collapsible-head5">1. Earthquake Preparedness<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 37.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Education and Awareness: Educating people about earthquake risks and safety measures is crucial. This includes knowing what to do during an earthquake, how to create an emergency plan, and assembling an emergency kit.</li>
+					<li>Emergency Plans: Develop and practice earthquake emergency plans for families, businesses, and communities. Establish meeting points and communication strategies.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head6">
+			<label for="collapsible-head6">2. Building Design and Construction<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 33.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Retrofitting: Strengthen older buildings that were constructed before modern seismic codes were in place to make them more earthquake-resistant.</li>
+					<li>Flexible Foundations: Use flexible foundation systems and seismic bracing techniques to allow buildings to sway during an earthquake without collapsing.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head7">
+			<label for="collapsible-head7">3. Early Warning Systems<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 38.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Seismic Monitoring: Invest in advanced seismic monitoring systems that can detect earthquake activity and provide early warnings.</li>
+					<li>Public Alert Systems: Establish public alert systems that can quickly disseminate earthquake alerts through various channels, such as cell phones and sirens.</li>
+					<li>Building Shut-off Systems: Develop systems that can automatically shut off gas, water, and electrical utilities in buildings to prevent fires and leaks during an earthquake.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="collapsible" data-aos="fade-right">
+			<input type="checkbox" id="collapsible-head8">
+			<label for="collapsible-head8">4. Community Planning<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 39rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+			<div class="collapsible-text">
+				<ul>
+					<li>Land Use Planning: Plan urban development in a way that reduces earthquake risk, including avoiding building on fault lines and liquefaction-prone areas.</li>
+					<li>Evacuation Routes: Establish evacuation routes and plans for communities, particularly those in high-risk areas.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom gradient-background">
+		<div class="container1">
+		<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
+			<h2>Contact Us</h2>
+			<input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="off">
+			<input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
+			<textarea id="message" rows="5" name="message" placeholder="How can we help you?" required autocomplete="off"></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		<footer><h6 style="margin-bottom: 0px;">© D-APP 2023</h4></footer>
+		</div>
+	</div>
+
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 120,
+			duration: 1000,
+		})
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+	crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="top">
+        <div>
+            <header class="p-3 text-bg-dark gradient-background" id="home">
+                <div class="container1">
+                  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                    </a>
+            
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                      <li><a href="#home" class="nav-link px-2 text-white">Home</a></li>
+                      <li class="nav-item dropdown"><a href="#disaster" class="nav-link px-2 text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="flood.html">Floods</a></li>
+                          <li><a class="dropdown-item" href="earthquake.html">Earthquakes</a></li>
+                          <li><a class="dropdown-item" href="#">Cyclones</a></li>
+                          <li><a class="dropdown-item" href="#">Landslides</a></li>
+                          <!-- <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                      </li>
+                      <li><a href="#donate" class="nav-link px-2 text-white">Donate</a></li>
+                      <!-- <li><a href="#" class="nav-link px-2 text-white"></a></li> -->
+                      <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
+            
+                    <form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                      <input type="search" id="search" list="input" class="form-control form-control-dark text-bg-light" placeholder="Search here" aria-label="Search" color="white" autocomplete="off">
+                      <datalist id="input">
+                        <option value="Floods" onclick="submit()">Floods</option>
+                        <option value="Earthquakes">Earthquakes</option>
+                        <option value="Cyclones">Cyclones</option>
+                        <option value="Landslides">Landslides</option>
+                        <option value="Disasters" onclick="submit()"><a href="#disaster">Disasters</a></option>
+                        <option value="Donate"><a href="#donate">Donate</a></option>
+                        <option value="About"><a href="#about">About</a></option>
+                      </datalist>
+                    </form>
+                  </div>      
+                </div>
+
+                <section>
+                    <div class="container">
+                        <h5>Welcome To</h5>
+                        <h1><span class="one">D</span><span class="two">isaster</span><span style="margin-bottom: 50rem;">&nbsp;&nbsp;-&nbsp;&nbsp;</span><span class="one">A</span><span class="two">wareness</span> <span class="one">P</span><span class="two">lus</span> <span class="one">P</span><span class="two">revention</span></h1> 
+                        <br>
+                        <h6>Use D-App To Prepare For D-Day</h6>
+                    </div>
+                </section>
+              </header>
+        </div>
+    </div>
+        
+    <div class="mid ">
+      <div class="container">
+        <section id="disaster">
+          <div>
+            <h2 style="color: rgb(41, 70, 143);">Disasters</h2>
+            <div class="box gradient-background container"></div>
+              <div class="cards">
+                <div class="card">
+                  <div class="card1">
+                    <span><img src="https://cdn.downtoearth.org.in/library/large/2020-07-18/0.43229900_1595054679_assam-floods.jpg" alt="Floods" class="card-img"></span>
+                    <div class="card-body">
+                      <h1 class="card-title">Floods</h1><br>
+                      <p class="info">Floods are the most frequent type of natural disaster and occur when an overflow of water submerges land that is usually dry. Floods are often caused by heavy rainfall, rapid snowmelt or a storm surge from a tropical cyclone or tsunami in coastal areas.</p>
+                      <button class="card-btn" onclick="window.location.assign('flood.html')">More info</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card1">
+                    <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIypdJI1AeJMaXQVrbtKX6oF_oaRHFTJU42A&usqp=CAU" alt="Earthquakes" class="card-img"></span>
+                    <div class="card-body">
+                      <h1 class="card-title">Earthquakes</h1>
+                      <p class="info"> Any sudden shaking of the ground caused by the passage of seismic waves through Earth's rocks. Seismic waves are produced when some form of energy stored in Earth's crust is suddenly released,</p>
+                      <button class="card-btn" onclick="window.location.assign('earthquake.html')">More info</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="card">
+                  <div class="card1">
+                    <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr81ideEkFOmOmQPrd1qURuh-v2d-_UvN0Bw&usqp=CAU" alt="Cyclones" class="card-img"></span>
+                    <div class="card-body">
+                      <h1 class="card-title">Cyclones</h1>
+                      <p class="info"> Any large system of winds that circulates about a centre of low atmospheric pressure in a counterclockwise direction north of the Equator and in a clockwise direction to the south.</p>
+                      <button class="card-btn">More info</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card1">
+                    <span><img src="https://media.istockphoto.com/id/469239302/photo/landslide-in-the-roadway-in-el-salvador.jpg?s=612x612&w=0&k=20&c=wveT9bmJk6r6OPP4muFrAOmidmNBgDu5DRlVCtBWodk=" alt="Landslides" class="card-img"></span>
+                    <div class="card-body">
+                      <h1 class="card-title">Landslides</h1>
+                      <p class="info"> A mass movement of material, such as rock, earth or debris, down a slope. They can happen suddenly or more slowly over long periods of time. When the force of gravity acting on a slope exceeds the resisting forces of a slope, the slope will fail and a landslide occurs.</p>
+                      <button class="card-btn">More info</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
+        <!-- <section id="donate">
+          <h2 style="color: rgb(41, 70, 143);">Donate</h2>
+          <div class="box gradient-background container"></div>
+        </section> -->
+        <section id="about" >
+            <h2 style="color: rgb(41, 70, 143);">About Us</h2>
+            <div class="box gradient-background container"></div>
+            <p data-aos="fade-right">We are team D-APP and we aim to provide our users with information related to different natural disaster like their causes, prevention techniques and about different warning systems to be prepared in advance when D-DAY comes. Our team comprises of six members and this is a demo website developed for SIH hackathon.</p>
+        </section>
+      </div>
+    </div>
+    
+    <div class="bottom gradient-background" style="margin: 0; padding: 0;">
+      <div class="container1">
+        <form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
+          <h2>Contact Us</h2>
+          <input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="off">
+          <input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
+          <textarea id="message" rows="5" name="message" placeholder="How can we help you?" required autocomplete="off"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <footer><h6 style="margin-bottom: 0px;">© D-APP 2023</h4></footer>
+      </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        duration: 1000,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <script>
+      function submit(){
+          window.location = "#disaster";
+        }
+    </script>
+</body>
+</html>
