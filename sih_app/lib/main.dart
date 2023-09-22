@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(initialRoute: "/", routes: {
-      "/": (context) => MyHomePage(),
-      "/2nd": (context) => Flood(),
-      "/3rd": (context) => Earthquake(),
-      "/4th": (context) => Cyclone(),
-      "/5th": (context) => Landslide(),
-      "/6th": (context) => Tornado(),
+      "/": (context) => const MyHomePage(),
+      "/2nd": (context) => const Flood(),
+      "/3rd": (context) => const Earthquake(),
+      "/4th": (context) => const Cyclone(),
+      "/5th": (context) => const Landslide(),
+      "/6th": (context) => const Tornado(),
     });
   }
 }
