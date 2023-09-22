@@ -3,6 +3,10 @@ body{
     /* display: grid; */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 p{
     /* line-height: 50px; */
     margin-top: 1rem;
