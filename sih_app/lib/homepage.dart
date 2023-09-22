@@ -36,35 +36,35 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               // Earthquake card
               Disaster(
-                  photo: const AssetImage("Images/earthquake-3.jpg"),
+                  photo: const AssetImage("Images/earthquake-2.jpg"),
                   txt: "Earthquake",
                   txtroute: () {
                     Navigator.pushNamed(context, "/3rd");
                   }),
               // Flood card
               Disaster(
-                  photo: const AssetImage("Images/flood.jpg"),
+                  photo: const AssetImage("Images/flood-2.jpg"),
                   txt: "Flood",
                   txtroute: () {
                     Navigator.pushNamed(context, "/2nd");
                   }),
               // Cyclone card
               Disaster(
-                  photo: const AssetImage("Images/cyclone.jpg"),
+                  photo: const AssetImage("Images/cyclone-1.jpg"),
                   txt: "Cyclone",
                   txtroute: () {
                     Navigator.pushNamed(context, "/4th");
                   }),
               // Landslide card
               Disaster(
-                  photo: const AssetImage("Images/landslide.jpg"),
+                  photo: const AssetImage("Images/landslide-3.jpg"),
                   txt: "Landslide",
                   txtroute: () {
                     Navigator.pushNamed(context, "/5th");
                   }),
               // Tornado card
               Disaster(
-                  photo: const AssetImage("Images/tornado.jpg"),
+                  photo: const AssetImage("Images/tornado-1.jpg"),
                   txt: "Tornado",
                   txtroute: () {
                     Navigator.pushNamed(context, "/6th");

@@ -48,13 +48,15 @@ class _DisasterState extends State<Disaster> {
 }
 
 class ImageImport extends StatelessWidget {
-  final double vp, hp, re;
+  final double vp, hp, re, ht, wd;
   final ImageProvider? photo;
 
   const ImageImport(
       {required this.vp,
       required this.hp,
       required this.re,
+      required this.ht,
+      required this.wd,
       required this.photo});
 
   @override
@@ -65,7 +67,12 @@ class ImageImport extends StatelessWidget {
           color: Colors.black,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(re),
-            child: Image(image: photo!),
+            child: Image(
+              image: photo!,
+              fit: BoxFit.cover,
+              height: ht,
+              width: wd,
+            ),
           )),
     );
   }
