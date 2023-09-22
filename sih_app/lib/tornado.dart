@@ -8,7 +8,7 @@ class Tornado extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Tornado",
           style: TextStyle(
             fontSize: 30.0,
@@ -27,7 +27,7 @@ class Tornado extends StatelessWidget {
               child: Image.asset("Images/tornado-2.jpg"),
             ),
             // Card with a description of a tornado
-            Card(
+            const Card(
               child: Text(
                 "A tornado is a rapidly rotating column of air that extends from a thunderstorm to the ground. Tornadoes can also cause significant damage to property and infrastructure, and they can lead to loss of life.",
                 style: TextStyle(fontSize: 20.0),

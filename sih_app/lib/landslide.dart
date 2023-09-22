@@ -8,7 +8,7 @@ class Landslide extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Landslide",
           style: TextStyle(
             fontSize: 30.0,
@@ -27,7 +27,7 @@ class Landslide extends StatelessWidget {
               child: Image.asset("Images/landslide-2.jpg"),
             ),
             // Card with a description of a landslide
-            Card(
+            const Card(
               child: Text(
                 "A landslide is a mass movement of rock, earth, or debris down a slope. Landslides can be caused by a variety of factors, including heavy rainfall, rapid snowmelt, earthquakes, and volcanic eruptions.",
                 style: TextStyle(fontSize: 20.0),

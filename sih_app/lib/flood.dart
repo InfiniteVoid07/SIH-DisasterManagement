@@ -8,7 +8,7 @@ class Flood extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Flood",
           style: TextStyle(
             fontSize: 30.0,
@@ -27,7 +27,7 @@ class Flood extends StatelessWidget {
               child: Image.asset("Images/flood-1.jpg"),
             ),
             // Card with a description of a flood
-            Card(
+            const Card(
               child: Text(
                 "A flood is an overflow of water that submerges land that is normally dry. Floods can be caused by a variety of factors, including heavy rainfall, snowmelt, storm surge, and dam failure.",
                 style: TextStyle(fontSize: 20.0),
