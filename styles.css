@@ -125,7 +125,7 @@ p{
 }
 
 .container{
-    text-align: left;
+    text-align: center;
     margin: 50px 300px 40px 0;
 }
 
@@ -150,9 +150,9 @@ p{
 
 h5{
     /* padding: 20px 10px 10px 5rem; */
-    text-align: left;
+    text-align: center;
     /* display: inline-block; */
-    margin: 1rem 7rem 3rem 0rem;
+    margin: 1rem 0rem 3rem 0rem;
     /* position: absolute;
     left: 0rem;
     bottom: 0rem;
@@ -171,9 +171,9 @@ h1{
     
     /* text-align: left; */
     color: black;
-    margin: 1rem 5rem 0.5rem 0;
-    position: absolute;
-    left: 2rem;
+    margin: 1rem 0rem 0.5rem 0;
+    /* position: absolute;
+    left: 2rem; */
 
 }
 
@@ -225,9 +225,9 @@ h6{
 }
 
 span{
-    font-size: 10rem;
-    text-align: left;
-    margin: 1rem 10rem 0.5rem 0;
+    font-size: 12rem;
+    text-align: center;
+    margin: 1rem 0rem 0.5rem 10rem;
     font-family: 'Anek Devanagari', sans-serif;
 }
 
