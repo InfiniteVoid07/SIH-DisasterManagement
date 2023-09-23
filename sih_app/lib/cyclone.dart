@@ -66,11 +66,35 @@ class Cyclone extends StatelessWidget {
               //Images
               const ImageImport(
                 vp: 10,
-                hp: 1,
+                hp: 5,
                 re: 20,
-                ht: 160,
-                wd: 320,
-                photo: AssetImage('Images/edo1.png'),
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdo1.png'),
+              ),
+              const ImageImport(
+                vp: 10,
+                hp: 5,
+                re: 20,
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdo2.png'),
+              ),
+              const ImageImport(
+                vp: 10,
+                hp: 5,
+                re: 20,
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdo3.png'),
+              ),
+              const ImageImport(
+                vp: 10,
+                hp: 5,
+                re: 20,
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdo4.png'),
               ),
 
               //Heading
@@ -87,25 +111,51 @@ class Cyclone extends StatelessWidget {
               //Images
               const ImageImport(
                 vp: 10,
-                hp: 1,
+                hp: 5,
                 re: 20,
-                ht: 160,
-                wd: 320,
-                photo: AssetImage('Images/edont1.png'),
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdont1.png'),
+              ),
+              const ImageImport(
+                vp: 10,
+                hp: 5,
+                re: 20,
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdont2.png'),
+              ),
+              const ImageImport(
+                vp: 10,
+                hp: 5,
+                re: 20,
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdont3.png'),
+              ),
+              const ImageImport(
+                vp: 10,
+                hp: 5,
+                re: 20,
+                ht: 100,
+                wd: 350,
+                photo: AssetImage('Images/cdont4.png'),
               ),
 
               //Code to open a URL
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () async {
                   final Uri url = Uri.parse(
-                      'https://infinitevoid07.github.io/SIH-DisasterManagement/flood.html');
+                      'https://infinitevoid07.github.io/SIH-DisasterManagement/cyclone.html');
                   await launchUrl(url);
                 },
-                child: Text('For more Information'),
+                child: Text('For more Information about Cyclones'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                 ),
               ),
+              const SizedBox(height: 10),
             ],
           ),
         ));

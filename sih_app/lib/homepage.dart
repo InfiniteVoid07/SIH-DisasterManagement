@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'components.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -68,7 +69,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   txt: "Tornado",
                   txtroute: () {
                     Navigator.pushNamed(context, "/6th");
-                  })
+                  }),
+              //Code to open a URL
+              const SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () async {
+                  final Uri url = Uri.parse(
+                      'https://infinitevoid07.github.io/SIH-DisasterManagement/');
+                  await launchUrl(url);
+                },
+                child: Text('Visit Our Website'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue,
+                ),
+              ),
+              const SizedBox(height: 10),
             ],
           ),
         ),

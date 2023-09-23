@@ -97,17 +97,19 @@ class Landslide extends StatelessWidget {
               ),
 
               //Code to open a URL
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () async {
                   final Uri url = Uri.parse(
-                      'https://infinitevoid07.github.io/SIH-DisasterManagement/flood.html');
+                      'https://infinitevoid07.github.io/SIH-DisasterManagement/landslides.html');
                   await launchUrl(url);
                 },
-                child: Text('For more Information'),
+                child: Text('For more Information about Landslides'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                 ),
               ),
+              const SizedBox(height: 10),
             ],
           ),
         ));
