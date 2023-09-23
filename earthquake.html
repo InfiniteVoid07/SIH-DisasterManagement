@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Earthquakes </title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -243,186 +246,574 @@
 	</style>
 
 <body>
-	<header class="p-3 text-bg-dark gradient-background">
-		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-	
-			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-			  <li><a href="index.html#home" class="nav-link px-2 text-white">Home</a></li>
-			  <li class="nav-item dropdown"><a href="#disaster" class="nav-link px-2 text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
-				<ul class="dropdown-menu">
-				  <li><a class="dropdown-item" href="flood.html">Floods</a></li>
-				  <li><a class="dropdown-item" href="earthquake.html">Earthquakes</a></li>
-				  <li><a class="dropdown-item" href="#">Cyclones</a></li>
-				  <li><a class="dropdown-item" href="#">Landslides</a></li>
-				  <!-- <li><hr class="dropdown-divider"></li>
-				  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-				</ul>
-			  </li>
-			  <li><a href="index.html#donate" class="nav-link px-2 text-white">Donate</a></li>
-			  <!-- <li><a href="#" class="nav-link px-2 text-white"></a></li> -->
-			  <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
-			  <li><a href="#causes" class="nav-link px-2 text-white">Causes</a></li>
-			  <li><a href="#preventions" class="nav-link px-2 text-white">Preventions</a></li>
-			  <!-- <li><h1>D-APP</h1></li> -->
-			</ul>
-			
-			<form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-			  <input type="search" id="search" list="input" class="form-control form-control-dark text-bg-light" placeholder="Search here" aria-label="Search" color="white" autocomplete="off">
-			  <datalist id="input">
-				<option value="Floods" onclick="submit()">Floods</option>
-				<option value="Earthquakes">Earthquakes</option>
-				<option value="Cyclones">Cyclones</option>
-				<option value="Landslides">Landslides</option>
-				<option value="Disasters"5><a href="#disaster">Disasters</a></option>
-				<option value="Donate"><a href="#donate">Donate</a></option>
-				<option value="About"><a href="#about">About</a></option>
-			  </datalist>
-			</form>
-		  </div>
-	</header>
-
-	<a href="https://t.me/DAAP31_BOT" class="bot" style="display: flex; flex-direction: column; align-items: end; justify-content: right; margin: 0.4rem 1rem 0 0; position: sticky; top: 0; bottom: -1px; ">
-		<img src="bot.png" role="button" style="height: 100px; width: 100px; margin-bottom: 0; border-radius: 1rem; border: none;">
-	</a>
-	<div class="heading">
-		<h1 style="text-align: left; margin: 7rem 3rem 1rem 3rem;">Earthquakes</h1>
-		<div class="vl"></div>
-		<div style="display: flex; flex-direction: column;">
-			<div style="display: flex; flex-direction: row;">
-				<p style="float: right; margin: 2.5rem 0.5rem 1rem 5rem;">An earthquake is when the ground shakes and moves because of energy released deep within the Earth. Imagine if you were holding a big rubber ball and suddenly squeezed it really hard and then let go. The ball would bounce and shake. That's kind of like what happens inside the Earth during an earthquake. This shaking can be strong or gentle, and it can sometimes cause damage to buildings and the land. Earthquakes are caused by the Earth's crust, which is like a big puzzle, breaking apart or sliding past each other.</p>
-				<img src="https://jotscroll.com/images/forums-posts-images/1541589947-Earthquakes-Images.jpg" alt="Image 4" width="200px" height="200px" style="float: right; margin: 4rem 5rem 2rem 0.5rem;"/>
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2022/11/supershear-earthquakes-800x450.jpg" alt="Image 3" width="450px" height="200px" style="margin: 1rem 5rem 2rem 7rem;"/>
-			</div>
-		</div>
+	<div id="language-selector">
+		<label for="language" style="margin: 2px;">Select Language:</label>
+		<button class="gradient-background" style="border-radius: 0.5rem; border: none; margin: 1px;" onclick="document.getElementById('hin').style.display = 'none'; document.getElementById('tam').style.display = 'none'; document.getElementById('eng').style.display = 'block';">English</button>
+		<button class="gradient-background" style="border-radius: 0.5rem; border: none; margin: 1px;" onclick="document.getElementById('eng').style.display = 'none'; document.getElementById('tam').style.display = 'none'; document.getElementById('hin').style.display = 'block';">हिन्दी (Hindi)</button>
+		<button class="gradient-background" style="border-radius: 0.5rem; border: none; margin: 1px;" onclick="document.getElementById('eng').style.display = 'none'; document.getElementById('hin').style.display = 'none'; document.getElementById('tam').style.display = 'block';">தமிழ் (Tamil)</button>
 	</div>
-
-	<div class="container" id="causes">
-		<b><h2 style="color: rgb(41, 70, 143); margin: 3rem 1rem 0 1rem;">Causes of Earthquakes</h2></b>
-		<div class="box gradient-background" style="width: 350px;"></div> 
-
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head1">
-			<label for="collapsible-head1">1. Tectonic Plate Movements<svg xmlns="http://www.w3.org/2000/svg" class="a1" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Divergent Boundaries: When tectonic plates move away from each other, such as along mid-ocean ridges, tensional forces can build up and lead to earthquakes.</li>
-					<img src="https://www.researchgate.net/publication/305782020/figure/fig1/AS:508759652790272@1498309161471/Schematic-representation-of-the-three-types-of-plate-boundaries-convergent-top.png" alt="" style="height: 300px; width: 300px; margin: 1rem;">
-					<li>Convergent Boundaries: When two tectonic plates collide or move toward each other, compressional forces can cause the Earth's crust to buckle and generate earthquakes. Subduction zones, where one plate is forced beneath another, are common locations for powerful earthquakes.</li>
-					<li>Transform Boundaries: Along transform boundaries, two plates slide past each other horizontally. The friction between the plates can cause them to become locked. When the stress overcomes the friction, it results in sudden movement and earthquakes.</li>
+	<div id="eng">
+		<header class="p-3 text-bg-dark gradient-background">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+		
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+				<li><a href="index.html#home" class="nav-link px-2 text-white">Home</a></li>
+				<li class="nav-item dropdown"><a href="#disaster" class="nav-link px-2 text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
+					<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="flood.html">Floods</a></li>
+					<li><a class="dropdown-item" href="earthquake.html">Earthquakes</a></li>
+					<li><a class="dropdown-item" href="cyclone.html">Cyclones</a></li>
+					<li><a class="dropdown-item" href="landslides.html">Landslides</a></li>
+					<!-- <li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li> -->
+					</ul>
+				</li>
+				<!-- <li><a href="index.html#donate" class="nav-link px-2 text-white">Donate</a></li> -->
+				<!-- <li><a href="#" class="nav-link px-2 text-white"></a></li> -->
+				<li><a href="#about" class="nav-link px-2 text-white">About</a></li>
+				<li><a href="#causes" class="nav-link px-2 text-white">Causes</a></li>
+				<li><a href="#prevention" class="nav-link px-2 text-white">Preventions</a></li>
+				<!-- <li><h1>D-APP</h1></li> -->
 				</ul>
 				
+				<form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+				<input type="search" id="search" list="input" class="form-control form-control-dark text-bg-light" placeholder="Search here" aria-label="Search" color="white" autocomplete="off">
+				<datalist id="input">
+					<option value="Floods" onclick="submit()">Floods</option>
+					<option value="Earthquakes">Earthquakes</option>
+					<option value="Cyclones">Cyclones</option>
+					<option value="Landslides">Landslides</option>
+					<option value="Disasters"5><a href="#disaster">Disasters</a></option>
+					<option value="Donate"><a href="#donate">Donate</a></option>
+					<option value="About"><a href="#about">About</a></option>
+				</datalist>
+				</form>
+			</div>
+
+		</header>
+
+		<a href="https://t.me/DAAP31_BOT" class="bot" style="display: flex; flex-direction: column; align-items: end; justify-content: right; margin: 0.4rem 1rem 0 0; position: sticky; top: 0; bottom: -1px; ">
+			<img src="https://github.com/InfiniteVoid07/SIH-DisasterManagement/blob/main/bot.png?raw=true" role="button" style="height: 100px; width: 100px; margin-bottom: 0; border-radius: 1rem; border: none;">
+		</a>
+		<div class="heading">
+			<h1 style="text-align: left; margin: 7rem 3rem 1rem 3rem;" id="disaster">Earthquakes</h1>
+			<div class="vl"></div>
+			<div style="display: flex; flex-direction: column;">
+				<div style="display: flex; flex-direction: row;">
+					<p style="float: right; margin: 2.5rem 0.5rem 1rem 5rem;" id="greeting">An earthquake is when the ground shakes and moves because of energy released deep within the Earth. Imagine if you were holding a big rubber ball and suddenly squeezed it really hard and then let go. The ball would bounce and shake. That's kind of like what happens inside the Earth during an earthquake. This shaking can be strong or gentle, and it can sometimes cause damage to buildings and the land. Earthquakes are caused by the Earth's crust, which is like a big puzzle, breaking apart or sliding past each other.</p>
+					<img src="https://jotscroll.com/images/forums-posts-images/1541589947-Earthquakes-Images.jpg" alt="Image 4" width="200px" height="200px" style="float: right; margin: 4rem 5rem 2rem 0.5rem;"/>
+				</div>
+				<div style="display: flex; flex-direction: column;">
+					<img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2022/11/supershear-earthquakes-800x450.jpg" alt="Image 3" width="450px" height="200px" style="margin: 1rem 5rem 2rem 7rem;"/>
+				</div>
 			</div>
 		</div>
 
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head2">
-			<label for="collapsible-head2">2. Volcanic Activity<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a2"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Earthquakes can occur in volcanic regions due to the movement of magma beneath the Earth's surface. These are often referred to as volcanic earthquakes and can be associated with volcanic eruptions.</li>
-				</ul>
+		<div class="container" id="causes">
+			<b><h2 style="color: rgb(41, 70, 143); margin: 3rem 1rem 0 1rem;" id="causes">Causes of Earthquakes</h2></b>
+			<div class="box gradient-background" style="width: 350px;"></div> 
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head1">
+				<label for="collapsible-head1">1. Tectonic Plate Movements<svg xmlns="http://www.w3.org/2000/svg" class="a1" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Divergent Boundaries: When tectonic plates move away from each other, such as along mid-ocean ridges, tensional forces can build up and lead to earthquakes.</li>
+						<img src="https://www.researchgate.net/publication/305782020/figure/fig1/AS:508759652790272@1498309161471/Schematic-representation-of-the-three-types-of-plate-boundaries-convergent-top.png" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>Convergent Boundaries: When two tectonic plates collide or move toward each other, compressional forces can cause the Earth's crust to buckle and generate earthquakes. Subduction zones, where one plate is forced beneath another, are common locations for powerful earthquakes.</li>
+						<li>Transform Boundaries: Along transform boundaries, two plates slide past each other horizontally. The friction between the plates can cause them to become locked. When the stress overcomes the friction, it results in sudden movement and earthquakes.</li>
+					</ul>
+					
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head2">
+				<label for="collapsible-head2">2. Volcanic Activity<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a2"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Earthquakes can occur in volcanic regions due to the movement of magma beneath the Earth's surface. These are often referred to as volcanic earthquakes and can be associated with volcanic eruptions.</li>
+						<img src="https://as1.ftcdn.net/v2/jpg/05/25/98/36/1000_F_525983623_N8caXEX4Ga9sdb10nPmYERAtQOKBv2du.jpg" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head3">
+				<label for="collapsible-head3">3. Human Activities<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a3"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Human activities, such as mining, reservoir-induced seismicity (caused by filling large reservoirs), hydraulic fracturing (fracking), and geothermal energy extraction, can induce earthquakes. These are known as induced seismicity or anthropogenic earthquakes.</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head4">
+				<label for="collapsible-head4">4. Stress Accumulation and Release<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a4"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Over time, stress accumulates along geological faults and plate boundaries as tectonic plates continue to move.
+							When the stress exceeds the strength of the rocks, it is suddenly released as seismic energy, causing an earthquake.</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head3">
-			<label for="collapsible-head3">3. Human Activities<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a3"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Human activities, such as mining, reservoir-induced seismicity (caused by filling large reservoirs), hydraulic fracturing (fracking), and geothermal energy extraction, can induce earthquakes. These are known as induced seismicity or anthropogenic earthquakes.</li>
-				</ul>
+		<div class="container" id="prevention">
+			<h2 style="color: rgb(41, 70, 143); margin: 2rem 1rem 0 1rem;">Earthquake Prevention</h2>
+			<div class="box gradient-background" style="width: 350px;"></div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head5">
+				<label for="collapsible-head5">1. Earthquake Preparedness<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 37.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Education and Awareness: Educating people about earthquake risks and safety measures is crucial. This includes knowing what to do during an earthquake, how to create an emergency plan, and assembling an emergency kit.</li>
+						<img src="https://media.istockphoto.com/id/474985235/vector/earthquake-safety-procedure.jpg?s=2048x2048&w=is&k=20&c=64cvOhInVDmFjNaA5wzVsZKmvFEvga529TEUQ_xnB8M=" alt="" style="height: 400px; width: 400px; margin: 0 1rem 1rem 1rem;">
+						<li>Emergency Plans: Develop and practice earthquake emergency plans for families, businesses, and communities. Establish meeting points and communication strategies.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head6">
+				<label for="collapsible-head6">2. Building Design and Construction<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 33.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Retrofitting: Strengthen older buildings that were constructed before modern seismic codes were in place to make them more earthquake-resistant.</li>
+						<img src="https://www.aboutcivil.org/sites/default/files/2017-09/earthquake-resistant-building-design.jpg" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>Flexible Foundations: Use flexible foundation systems and seismic bracing techniques to allow buildings to sway during an earthquake without collapsing.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head7">
+				<label for="collapsible-head7">3. Early Warning Systems<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 38.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Seismic Monitoring: Invest in advanced seismic monitoring systems that can detect earthquake activity and provide early warnings.</li>
+						<img src="https://media.licdn.com/dms/image/C5612AQHPC24SQtWmcQ/article-cover_image-shrink_600_2000/0/1520104873442?e=2147483647&v=beta&t=citKC5Lm22MzH74wlfBzDj65nD8osMSL3EMnB35KyqY" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>Public Alert Systems: Establish public alert systems that can quickly disseminate earthquake alerts through various channels, such as cell phones and sirens.</li>
+						<li>Building Shut-off Systems: Develop systems that can automatically shut off gas, water, and electrical utilities in buildings to prevent fires and leaks during an earthquake.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head8">
+				<label for="collapsible-head8">4. Community Planning<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 39rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>Land Use Planning: Plan urban development in a way that reduces earthquake risk, including avoiding building on fault lines and liquefaction-prone areas.</li>
+						
+						<li>Evacuation Routes: Establish evacuation routes and plans for communities, particularly those in high-risk areas.</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head4">
-			<label for="collapsible-head4">4. Stress Accumulation and Release<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="a4"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Over time, stress accumulates along geological faults and plate boundaries as tectonic plates continue to move.
-						When the stress exceeds the strength of the rocks, it is suddenly released as seismic energy, causing an earthquake.</li>
+
+		<div class="last gradient-background">
+			<div class="bottom" style="margin: 0; padding: 0;">
+			<div class="container1">
+				<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
+				<h2>Contact Us</h2>
+				<input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="off">
+				<input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
+				<textarea id="message" rows="5" name="message" placeholder="How can we help you?" required autocomplete="off"></textarea>
+				<button type="submit">Submit</button>
+				</form>
+				<footer><h6 style="margin-bottom: 0px; text-align: center;">© d-ऐPP 2023</h6></footer>
+			</div>
+			</div>
+			<div class="vl"></div>
+			<div style="display: flex; flex-direction: column;">
+			<section id="about" >
+				<h2 style="color: rgb(41, 70, 143); margin-top: 1rem;" >About Us</h2>
+				<div class="box gradient-background container" style="width: 150px; margin-left: 0;"></div>
+				<p style="margin: 1rem 1rem 1rem 0rem;" data-aos="fade-right">Our team aims to provide the users with information related to various natural disasters including their causes, prevention techniques and warning systems to have everything prepared in advance for the D-DAY. 
+				Through our application we also provide users with the safety measures that must be taken during the time of disaster. We have also elaborated on what has to be done before and after a disaster. It also provides the mapping of the nearest rescue centers. To avoid panic due to low internet connectivity that a person might face during a disaster we have provided the offline map system. 
+				We are a team of 6 and this is a demo website developed for the SIH hackathon.</p>
+			</section>
+			</div>
+		</div>
+	</div>
+	<div id="hin" style="display: none;">
+		<header class="p-3 text-bg-dark gradient-background">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+	
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a href="index.html#home" class="nav-link px-2 text-white">होम</a></li>
+					<li class="nav-item dropdown"><a href="#disaster" class="nav-link px-2 text-white dropdown-toggle"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false">प्राकृतिक आपदाएँ</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="flood.html">बाढ़</a></li>
+							<li><a class="dropdown-item" href="earthquake.html">भूकंप</a></li>
+							<li><a class="dropdown-item" href="cyclone.html">साइक्लोन</a></li>
+							<li><a class="dropdown-item" href="landslides.html">भूस्खलन</a></li>
+						</ul>
+					</li>
+					<!-- <li><a href="index.html#donate" class="nav-link px-2 text-white">दान करें</a></li> -->
+					<!-- <li><a href="#" class="nav-link px-2 text-white"></a></li> -->
+					<li><a href="#about1" class="nav-link px-2 text-white">हमारे बारे में</a></li>
+					<li><a href="#causes2" class="nav-link px-2 text-white">कारण</a></li>
+					<li><a href="#prevention2" class="nav-link px-2 text-white">रोकथाम</a></li>
+					<!-- <li><h1>D-APP</h1></li> -->
 				</ul>
+	
+				<form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+					<input type="search" id="search" list="input" class="form-control form-control-dark text-bg-light"
+						placeholder="यहाँ खोजें" aria-label="खोजें" color="white" autocomplete="off">
+					<datalist id="input">
+						<option value="बाढ़" onclick="submit()">बाढ़</option>
+						<option value="भूकंप">भूकंप</option>
+						<option value="साइक्लोन">साइक्लोन</option>
+						<option value="भूस्खलन">भूस्खलन</option>
+						<option value="प्राकृतिक आपदाएँ"><a href="#disaster">प्राकृतिक आपदाएँ</a></option>
+						<option value="दान करें"><a href="#donate">दान करें</a></option>
+						<option value="हमारे बारे में"><a href="#about">हमारे बारे में</a></option>
+					</datalist>
+				</form>
+			</div>
+		</header>
+	
+		<a href="https://t.me/DAAP31_BOT" class="bot"
+			style="display: flex; flex-direction: column; align-items: end; justify-content: right; margin: 0.4rem 1rem 0 0; position: sticky; top: 0; bottom: -1px; ">
+			<img src="bot.png" role="button"
+				style="height: 100px; width: 100px; margin-bottom: 0; border-radius: 1rem; border: none;">
+		</a>
+		<div class="heading">
+			<h1 style="text-align: left; margin: 7rem 3rem 3rem 3rem;">भूकंप</h1>
+			<div class="vl" style="margin: 0 2rem 2rem 2rem;"></div>
+			<div style="display: flex; flex-direction: column;">
+				<div style="display: flex; flex-direction: row;">
+					<p style="float: right; margin: 4rem 0.5rem 1rem 5rem;">भूकंप एक प्राकृतिक घटना है जब भूमि शक्ति के गहरे अंदर से छूटने के कारण कांपती है और हिलती है। सोचें कि आप एक बड़े रबर के गेंद को पकड़ रहे हैं और फिर बहुत जोर से दबा देते हैं और फिर छोड़ देते हैं। गेंद उछलकर हिलेगी और कांपेगी। यह कुछ उसी तरह होता है जैसे कि एक भूकंप के दौरान पृथ्वी के अंदर होता है। यह हिलावट मजबूत या हल्की हो सकती है, और कभी-कभी इससे इमारतों और भूमि में क्षति हो सकती है। भूकंप भूमि की परत, जो एक बड़ी पहेली की तरह है, एक-दूसरे के पास आकर्षित होने या एक-दूसरे के पास फिसल जाने के कारण होते हैं।</p>
+					<img src="https://jotscroll.com/images/forums-posts-images/1541589947-Earthquakes-Images.jpg" alt="Image 4" width="200px" height="200px" style="float: right; margin: 4rem 5rem 2rem 0.5rem;" />
+				</div>
+				<div style="display: flex; flex-direction: column;">
+					<img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2022/11/supershear-earthquakes-800x450.jpg" alt="Image 3" width="450px" height="200px"
+						style="margin: 1rem 5rem 2rem 7rem;" />
+				</div>
+			</div>
+		</div>
+	
+		<div class="container" id="causes2">
+			<b><h2 style="color: rgb(41, 70, 143); margin: 3rem 1rem 0 1rem;">भूकंप के कारण</h2></b>
+			<div class="box gradient-background" style="width: 350px;"></div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head9">
+				<label for="collapsible-head9">1. टेक्टोनिक प्लेट गतियाँ<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 39.75rem;" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>भूकंप ज्वालामुखी क्षेत्रों में भी हो सकते हैं क्योंकि भूमि की सतह के नीचे मैग्मा की गति के कारण। इन्हें अक्सर ज्वालामुखी फूटने के साथ जुड़ा जाता है और इन्हें ज्वालामुखी भ्रमण के रूप में संदर्भित किया जाता है।</li>
+						<img src="https://www.researchgate.net/publication/305782020/figure/fig1/AS:508759652790272@1498309161471/Schematic-representation-of-the-three-types-of-plate-boundaries-convergent-top.png" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>संघटन सीमाएँ: जब दो टेक्टॉनिक प्लेट्स भिगो जाती हैं या एक-दूसरे की ओर बढ़ती हैं, तो संपीड़न बल भूमि की परत को टकटकाने और भूकंप उत्पन्न करने का कारण बन सकते हैं। सबडक्शन जोन्स, जहां एक प्लेट को दूसरे के नीचे दबाया जाता है, शक्तिशाली भूकंप के लिए सामान्य स्थल हैं।</li>
+						<li>ट्रांसफॉर्म सीमाएँ: ट्रांसफॉर्म सीमाओं के साथ, दो प्लेट्स एक-दूसरे के पास साइड करते हैं। प्लेट्स के बीच की घर्षण इन प्लेट्स को लॉक कर सकती है और यह जब इन्हें तोड़ती है, तो यह भूकंप का कारण बनती है।</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head10">
+				<label for="collapsible-head10">2. ज्वालामुखी गतियाँ<svg xmlns="http://www.w3.org/2000/svg" class="a2" width="24" height="24"><path
+							d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>भूकंप ज्वालामुखी क्षेत्रों में भी हो सकते हैं क्योंकि भूमि की सतह के नीचे मैग्मा की गति के कारण। इन्हें अक्सर ज्वालामुखी फूटने के साथ जुड़ा जाता है और इन्हें ज्वालामुखी भ्रमण के रूप में संदर्भित किया जाता है।</li>
+						<img src="https://as1.ftcdn.net/v2/jpg/05/25/98/36/1000_F_525983623_N8caXEX4Ga9sdb10nPmYERAtQOKBv2du.jpg" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+					</ul>
+				</div>
+			</div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head11">
+				<label for="collapsible-head11">3. मानव गतिविधियां<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 41.5rem;" width="24" height="24"><path
+							d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>मानव गतिविधियाँ, जैसे कि खदान, बड़े जलाशयों को भरने के कारण उत्पन्न भूकंप (बड़े जलाशयों को भरने के कारण उत्पन्न भूकंप), हाइड्रोलिक फ्रैक्चरिंग (फ्रैकिंग), और भूतापीय ऊर्जा निष्कर्षण, ऐसे मानव गतिविधियाँ हैं जो भूकंप को उत्पन्न कर सकती हैं। इन्हें उत्पन्न किया जाने वाला भूकंप या मानवजन्य भूकंप के रूप में जाना जाता है।</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head12">
+				<label for="collapsible-head12">4. स्थिति संचयन और मुक्ति<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 38.5rem;" width="24" height="24"><path
+							d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>समय के साथ, जबकि टेक्टॉनिक प्लेट्स आगे बढ़ते रहते हैं, तो भूभागीय फॉल्ट्स और प्लेट सीमाओं पर तनाव संचित होता है। जब तनाव पत्थरों की ताक़त को पार कर जाता है, तो यह अचानक से भूकंप के रूप में संवेगित ऊर्जा के रूप में मुक्त हो जाता है, जिससे भूकंप होता है।</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<div class="container" id="prevention2">
+			<b><h2 style="color: rgb(41, 70, 143); margin: 3rem 1rem 0 1rem;">भूकंप से बचाव</h2></b>
+			<div class="box gradient-background" style="width: 280px;"></div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head13">
+				<label for="collapsible-head13">1. भूकंप प्रस्तुतिकरण<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 42rem;" width="24" height="24"><path
+							d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>शिक्षा और जागरूकता: भूकंप के जोखिम और सुरक्षा उपायों के बारे में लोगों को शिक्षित करना महत्वपूर्ण है। इसमें भूकंप के दौरान क्या करना है, आपातकालीन योजना कैसे तैयार करें, और आपातकालीन किट तैयार करने का तरीका जानना शामिल है।</li>
+						<img src="https://media.istockphoto.com/id/474985235/vector/earthquake-safety-procedure.jpg?s=2048x2048&w=is&k=20&c=64cvOhInVDmFjNaA5wzVsZKmvFEvga529TEUQ_xnB8M=" alt="" style="height: 400px; width: 400px; margin: 0 1rem 1rem 1rem;">
+						<li>आपातकालीन योजनाएँ: परिवारों, व्यापारों और समुदायों के लिए भूकंप आपातकालीन योजनाएँ बनाएं और अभ्यास करें। मिलने के स्थान और संचालन रणनीतियों की स्थापना करें।।</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head14">
+				<label for="collapsible-head14">2. भवन डिज़ाइन और निर्माण<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 38.5rem;" width="24" height="24"><path
+							d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>रेट्रोफिटिंग: उन पुराने इमारतों को मजबूती देने की प्रक्रिया, जो मॉडर्न भूकंपीय कोड्स लागू होने से पहले निर्मित हुई थी, ताकि उन्हें भूकंपों के प्रति अधिक सही बनाया जा सके।</li>
+						<img src="https://www.aboutcivil.org/sites/default/files/2017-09/earthquake-resistant-building-design.jpg" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>फ्लेक्सिबल नींव: भूकंप के दौरान इमारतों को गिरावट के बिना हिल सकने के लिए फ्लेक्सिबल नींव प्रणाली और सीस्मिक ब्रेसिंग तकनीकों का उपयोग करें।</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head15">
+				<label for="collapsible-head15">3. पूर्व सतर्कता प्रणालियाँ<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 40.75rem;" width="24" height="24"><path
+							d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" /></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>भूकंप मॉनिटरिंग: पूर्व सूचना प्रदान करने के लिए भूकंप गतिविधि की पहचान कर सकने और पूर्व सूचना प्रदान कर सकने वाले उन्नत भूकंप मॉनिटरिंग प्रणालियों में निवेश करें।</li>
+						<img src="https://media.licdn.com/dms/image/C5612AQHPC24SQtWmcQ/article-cover_image-shrink_600_2000/0/1520104873442?e=2147483647&v=beta&t=citKC5Lm22MzH74wlfBzDj65nD8osMSL3EMnB35KyqY" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>सार्वजनिक चेतावनी प्रणालियों की स्थापना करें जो विभिन्न चैनलों के माध्यम से भूकंप चेतावनियों को त्वरित रूप से प्रसारित कर सकती हैं, जैसे मोबाइल फोन और सायरन्स के माध्यम से।</li>
+						<li>इमारतों में उपयोग होने वाले शट-ऑफ सिस्टम: भूकंप के दौरान आग और रिसाव को रोकने के लिए जीर, पानी, और बिजली की उपयोगिता को स्वचालित रूप से बंद करने के लिए सिस्टम विकसित करें।</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head16">
+				<label for="collapsible-head16">4. समुदाय योजना<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 43.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>भूमि उपयोग योजना: नकाबंदी रेखाओं और तरलीकरण-संवेगनशील क्षेत्रों पर निर्माण से बचने के साथ सहित, भूकंप जोखिम को कम करने के तरीके में शहरी विकास की योजना बनाएं।</li>
+						<li>निकासी मार्ग: समुदायों के लिए निकासी मार्ग और योजनाएँ स्थापित करें, विशेष रूप से उन स्थलों के लिए जो उच्च जोखिम वाले क्षेत्रों में हैं।</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<div class="last gradient-background">
+			<div class="bottom" style="margin: 0; padding: 0;">
+			  <div class="container1">
+				<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
+				  <h2>संपर्क करें</h2>
+				  <input type="text" id="name" name="name" placeholder="पूरा नाम" required autocomplete="off">
+				  <input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
+				  <textarea id="message" rows="5" name="message" placeholder="हम आपकी कैसे मदद कर सकते हैं?" required autocomplete="off"></textarea>
+				  <button type="submit">जमा करें</button>
+				</form>
+				<footer><h6 style="margin-bottom: 0px; text-align: center;">© d-ऐPP 2023</h6></footer>
+			  </div>
+			</div>
+			<div class="vl"></div>
+			<div style="display: flex; flex-direction: column;">
+			  <section id="about1" >
+				<h2 style="color: rgb(41, 70, 143); margin-top: 1rem;" >हमारे बारे में</h2>
+				<div class="box gradient-background container" style="width: 150px; margin-left: 0;"></div>
+				<p style="margin: 2rem 1rem 1rem 0rem;" data-aos="fade-right">हमारी टीम का उद्देश्य उपयोगकर्ताओं को विभिन्न प्राकृतिक आपदाओं से संबंधित जानकारी प्रदान करना है, जैसे कि उनके कारण, रोकथाम तकनीकों और सुचेतना प्रणालियों के बारे में, ताकि D-DAY के लिए सब कुछ पहले से तैयार हो सके। हमारे एप्लिकेशन के माध्यम से हम उपयोगकर्ताओं को आपातकाल के समय लेनी चाहिए सुरक्षा उपायों को भी प्रदान करते हैं। हमने यह भी विस्तार से बताया है कि एक आपदा के पहले और बाद में क्या करना चाहिए। यह भी निकटतम बचाव केंद्रों के मैपिंग की प्रदान करता है। आपदा के दौरान जिस इंटरनेट कनेक्टिविटी की कमी का किसी व्यक्ति का सामना हो सकता है, उससे बचाव के लिए हमने ऑफलाइन मैप सिस्टम भी प्रदान किया है।
+					हम 6 सदस्यों की टीम हैं और यह एक SIH हैकाथॉन के लिए विकसित डेमो वेबसाइट है।</p>
+			  </section>
 			</div>
 		</div>
 	</div>
 
-	<div class="container" id="preventions">
-		<h2 style="color: rgb(41, 70, 143); margin: 2rem 1rem 0 1rem;">Earthquake Prevention</h2>
-		<div class="box gradient-background" style="width: 350px;"></div>
+	<div id="tam" style="display: none;">
+		<header class="p-3 text-bg-dark gradient-background">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html#home" class="nav-link px-2 text-white">முகப்பு</a></li>
+                    <li class="nav-item dropdown"><a href="#disaster" class="nav-link px-2 text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">பேரிடங்கள்</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="flood.html">விளம்பரம்</a></li>
+                            <li><a class="dropdown-item" href="earthquake.html">பூமியாகதங்கம்</a></li>
+                            <li><a class="dropdown-item" href="cyclone.html">சைக்லோன்கள்</a></li>
+                            <li><a class="dropdown-item" href="landslides.html">புனைகள்</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about3" class="nav-link px-2 text-white">எங்களை பற்றி</a></li>
+                    <li><a href="#causes3" class="nav-link px-2 text-white">நிலநடுக்கத்திற்கான காரணங்கள்</a></li>
+                    <li><a href="#preventions3" class="nav-link px-2 text-white">நிலநடுக்கம் தடுப்பு</a></li>
+                </ul>
+                
+                <form class="col-6 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" id="search" list="input" class="form-control form-control-dark text-bg-light" placeholder="இங்கே தேடவும்" aria-label="தேடு" color="white" autocomplete="off">
+                    <datalist id="input">
+                        <option value="விளம்பரம்" onclick="submit()">விளம்பரம்</option>
+                        <option value="பூமியாகதங்கம்">பூமியாகதங்கம்</option>
+                        <option value="சைக்லோன்கள்">சைக்லோன்கள்</option>
+                        <option value="புனைகள்">புனைகள்</option>
+                        <option value="பேரிடங்கள்"><a href="#disaster">பேரிடங்கள்</a></option>
+                        <option value="நன்கொடை"><a href="#donate">நன்கொடை</a></option>
+                        <option value="எங்களை பற்றி"><a href="#about">எங்களை பற்றி</a></option>
+                    </datalist>
+                </form>
+            </div>
+    
+        </header>
+    
+        <a href="https://t.me/DAAP31_BOT" class="bot" style="display: flex; flex-direction: column; align-items: end; justify-content: right; margin: 0.4rem 1rem 0 0; position: sticky; top: 0; bottom: -1px; ">
+            <img src="https://github.com/InfiniteVoid07/SIH-DisasterManagement/blob/main/bot.png?raw=true" role="button" style="height: 100px; width: 100px; margin-bottom: 0; border-radius: 1rem; border: none;">
+        </a>
+        <div class="heading" style="height: 750px;">
+            <h1 style="text-align: left; margin: 7rem 3rem 1rem 3rem;" id="disaster">பூமியாகதங்கம்</h1>
+            <div class="vl" style="height: 750px;"></div>
+            <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: row;">
+                    <p style="float: right; margin: 2.5rem 0.5rem 1rem 1rem;" id="greeting">பூமியாகதங்கம் என்பது பூமியில் ஆழமும் விரிவும் விடும் படிகள் ஆகிய கனியில் விடும்படும் போது உண்டாகும் சக்தியின் விடையில். உங்களுக்கு பெரிய இரும்பு பந்தித்து அதிசிக்கின்றது மற்றும் அப்போது அதை விட்டுவிடுகின்றீர்கள். அந்த பேரிடங்கம் நடக்கும்போது பூமியில் என்ன நடக்குகிறது என்று கருத்தில் கொண்டுபோகலாம். இந்த அல்லதும் வலிமை மற்றும் மணம் குடிகளுக்கு பாதிகள் மற்றும் நிலங்களுக்கு விபத்து ஏற்படலாம். பூமியாகதங்கங்கள் பூமியின் உபரி, அந்தகள் பூஜ்ஜியம் ஆகும், அல்லது ஒன்றின் அதிகரித்த அல்லது ஒன்று முழுமையாக அதிகரித்த பூமியின் முகத்தை உடைத்தல் அல்லது பார்த்தல் போன்ற கொடிகளை மீறுகின்றன.</p>
+                    <img src="https://jotscroll.com/images/forums-posts-images/1541589947-Earthquakes-Images.jpg" alt="படம் 4" width="200px" height="200px" style="float: right; margin: 7rem 5rem 2rem 0.5rem;"/>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <img src="https://www.innovationnewsnetwork.com/wp-content/uploads/2022/11/supershear-earthquakes-800x450.jpg" alt="படம் 3" width="450px" height="200px" style="margin: 1rem 5rem 2rem 7rem;"/>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container" id="causes3">
+            <b><h2 style="color: rgb(41, 70, 143); margin: 3rem 1rem 0 1rem;" id="causes">நிலநடுக்கத்திற்கான காரணங்கள்</h2></b>
+            <div class="box gradient-background" style="width: 650px;"></div> 
+    
+            <div class="collapsible" data-aos="fade-right">
+                <input type="checkbox" id="collapsible-head17">
+                <label for="collapsible-head17">1. டெக்டோனிக் தட்டு இயக்கங்கள்<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 30rem;" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+                <div class="collapsible-text">
+                    <ul>
+                        <li>திருமுறை அல்லது குடிகள் நகர்கின்றனவும் தாக்கும் கடகம் அல்லது அவற்றை விடும்படும் கடகங்கள் ஒன்றில் ஒன்று பக்கத்தை அப்படியே விடும்படுத்தினது, உங்கள் தகம் வளைந்தது பக்கத்தை அல்லது ஒன்று மீறும் போது ஏற்படும். பூமியில் பூமியாகதங்கம் அந்தகள் அல்லது ஒன்று பக்கத்தை அப்படியே விடும்படுத்தினது. இந்த அல்லதும் அது சிகிச்சை மற்றும் அவற்றை ஒன்றில் ஒன்று மீறும் வகைகளாக அந்தகள் ஒன்றில் ஒன்றை நீக்கும் போது ஏற்படும்.</li>
+                        <img src="https://www.researchgate.net/publication/305782020/figure/fig1/AS:508759652790272@1498309161471/Schematic-representation-of-the-three-types-of-plate-boundaries-convergent-top.png" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+                        <li>ஒன்றில் ஒன்றை விடும்படுத்தும்போது, இரு தாக்கும் கடகங்கள் ஒன்றில் ஒன்றை நீக்கின்றன. கடகங்கள் இடையேயில் நடக்கும்போது அதரசியல் விசேஷங்கள் போல பக்கத்தை அல்லது ஒன்று மீறும் போது ஏற்படும் பூமியின் உபரி, இந்த அல்லது அது இரும்புவளை அடிப்படையாக அந்தகங்கம் அல்லது அதக்கு இரும்புவளைத்தல் அந்தகங்கம் அந்தகங்களை முட்டிக்குகின்றது.</li>
+                        <li>அகப்போது கடகங்கள் ஒன்றில் ஒன்றை நீக்க முடிந்தது போது தாக்கும் கடகங்கள் அல்லது அந்தகங்கங்கள் ஒன்றில் ஒன்றை நீக்க முடிந்தது போது உங்கள் அநுசலம் சிகிச்சையாக அந்தகள் அந்தகள் ஒன்றில் ஒன்றை நீக்க முடிந்தது போது அந்த அல்லது அது வேகமாக அந்தகங்கம் அத்தகைய இரும்புவளைத்தல் விருது அந்தகங்கங்கள் ஒன்றில் ஒன்றை நீக்க முடிந்தது போது உங்கள் அநுசலம் சிகிச்சையாக அந்தகள் அந்தகள் ஒன்றில் ஒன்றை நீக்க முடிந்தது போது அந்த அல்லது அது வேகமாக அந்தகங்கம் அத்தகைய இரும்புவளைத்தல் விருது அந்தகங்கங்கள் அந்தகங்களை முட்டிக்குகின்றது.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+    
+            <div class="collapsible" data-aos="fade-right">
+                <input type="checkbox" id="collapsible-head18">
+                <label for="collapsible-head18">2. எரிமலை செயல்பாடு<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 36rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+                <div class="collapsible-text">
+                    <ul>
+                        <li>பூமியின் மேற்பரப்பிற்கு அடியில் மாக்மாவின் இயக்கம் காரணமாக எரிமலை பகுதிகளில் பூகம்பங்கள் ஏற்படலாம். இவை பெரும்பாலும் எரிமலை பூகம்பங்கள் என்று குறிப்பிடப்படுகின்றன மற்றும் எரிமலை வெடிப்புகளுடன் தொடர்புடையதாக இருக்கலாம்.</li>
+						<img src="https://as1.ftcdn.net/v2/jpg/05/25/98/36/1000_F_525983623_N8caXEX4Ga9sdb10nPmYERAtQOKBv2du.jpg" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="collapsible" data-aos="fade-right">
+                <input type="checkbox" id="collapsible-head19">
+                <label for="collapsible-head19">3. மனித செயல்பாடுகள்<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 36rem;" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+                <div class="collapsible-text">
+                    <ul>
+                        <li>சுரங்கம், நீர்த்தேக்கத்தால் தூண்டப்படும் நில அதிர்வு (பெரிய நீர்த்தேக்கங்களை நிரப்புவதால் ஏற்படும்), ஹைட்ராலிக் ஃபிராக்ச்சரிங் (ஃபிராக்கிங்) மற்றும் புவிவெப்ப ஆற்றல் பிரித்தெடுத்தல் போன்ற மனித நடவடிக்கைகள் பூகம்பங்களைத் தூண்டலாம். இவை தூண்டப்பட்ட நில அதிர்வு அல்லது மானுடவியல் பூகம்பங்கள் என்று அழைக்கப்படுகின்றன.</li>
+                    </ul>
+                </div>
+            </div>
 
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head5">
-			<label for="collapsible-head5">1. Earthquake Preparedness<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 37.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Education and Awareness: Educating people about earthquake risks and safety measures is crucial. This includes knowing what to do during an earthquake, how to create an emergency plan, and assembling an emergency kit.</li>
-					<li>Emergency Plans: Develop and practice earthquake emergency plans for families, businesses, and communities. Establish meeting points and communication strategies.</li>
-				</ul>
+            <div class="collapsible" data-aos="fade-right">
+                <input type="checkbox" id="collapsible-head20">
+                <label for="collapsible-head20">4. அழுத்தக் குவிப்பு மற்றும் வெளியீடு<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 28.5rem;" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+                <div class="collapsible-text">
+                    <ul>
+                        <li>காலப்போக்கில், டெக்டோனிக் தட்டுகள் தொடர்ந்து நகர்வதால், புவியியல் தவறுகள் மற்றும் தட்டு எல்லைகளில் அழுத்தம் குவிகிறது.
+                            பாறைகளின் வலிமையை விட அழுத்தம் அதிகமாகும் போது, ​​அது திடீரென நில அதிர்வு ஆற்றலாக வெளியாகி நிலநடுக்கத்தை ஏற்படுத்துகிறது.</li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="container" id="preventions3">
+			<h2 style="color: rgb(41, 70, 143); margin: 2rem 1rem 0 1rem;">நிலநடுக்கம் தடுப்பு</h2>
+			<div class="box gradient-background" style="width: 350px;"></div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head21">
+				<label for="collapsible-head21">1. பூகம்பத் தயார்நிலை<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 37rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>கல்வி மற்றும் விழிப்புணர்வு: நிலநடுக்க அபாயங்கள் மற்றும் பாதுகாப்பு நடவடிக்கைகள் குறித்து மக்களுக்குக் கற்பிப்பது மிகவும் முக்கியமானது. நிலநடுக்கத்தின் போது என்ன செய்வது, அவசரகாலத் திட்டத்தை எவ்வாறு உருவாக்குவது மற்றும் அவசரகாலப் பெட்டியை அசெம்பிள் செய்வது ஆகியவை இதில் அடங்கும்.</li>
+						<img src="https://media.istockphoto.com/id/474985235/vector/earthquake-safety-procedure.jpg?s=2048x2048&w=is&k=20&c=64cvOhInVDmFjNaA5wzVsZKmvFEvga529TEUQ_xnB8M=" alt="" style="height: 400px; width: 400px; margin: 0 1rem 1rem 1rem;">
+						<li>அவசரத் திட்டங்கள்: குடும்பங்கள், வணிகங்கள் மற்றும் சமூகங்களுக்கான பூகம்ப அவசரத் திட்டங்களை உருவாக்கி நடைமுறைப்படுத்துங்கள். சந்திப்பு புள்ளிகள் மற்றும் தகவல் தொடர்பு உத்திகளை அமைக்கவும்.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head22">
+				<label for="collapsible-head22">2. கட்டிட வடிவமைப்பு மற்றும் கட்டுமானம்<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 26.25rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>மறுசீரமைப்பு: நவீன நில அதிர்வு குறியீடுகள் உருவாக்கப்படுவதற்கு முன்பு கட்டப்பட்ட பழைய கட்டிடங்களை மேலும் பூகம்பத்தை எதிர்க்கும் திறன் கொண்டதாக மாற்றவும்.</li>
+						<img src="https://www.aboutcivil.org/sites/default/files/2017-09/earthquake-resistant-building-design.jpg" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>நெகிழ்வான அடித்தளங்கள்: பூகம்பத்தின் போது கட்டிடங்கள் இடிந்து விழாமல் அசைய அனுமதிக்க நெகிழ்வான அடித்தள அமைப்புகள் மற்றும் நில அதிர்வு பிரேசிங் நுட்பங்களைப் பயன்படுத்தவும்.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head23">
+				<label for="collapsible-head23">3. முன் எச்சரிக்கை அமைப்புகள்<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 32rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>நில அதிர்வு கண்காணிப்பு: நிலநடுக்கச் செயல்பாட்டைக் கண்டறிந்து முன்கூட்டியே எச்சரிக்கைகளை வழங்கக்கூடிய மேம்பட்ட நில அதிர்வு கண்காணிப்பு அமைப்புகளில் முதலீடு செய்யுங்கள்.</li>
+						<img src="https://media.licdn.com/dms/image/C5612AQHPC24SQtWmcQ/article-cover_image-shrink_600_2000/0/1520104873442?e=2147483647&v=beta&t=citKC5Lm22MzH74wlfBzDj65nD8osMSL3EMnB35KyqY" alt="" style="height: 300px; width: 300px; margin: 1rem;">
+						<li>பொது எச்சரிக்கை அமைப்புகள்: செல்போன்கள் மற்றும் சைரன்கள் போன்ற பல்வேறு சேனல்கள் மூலம் பூகம்ப எச்சரிக்கைகளை விரைவாகப் பரப்பக்கூடிய பொது எச்சரிக்கை அமைப்புகளை நிறுவுதல்.</li>
+						<li>கட்டிடம் மூடும் அமைப்புகள்: பூகம்பத்தின் போது தீ மற்றும் கசிவுகளைத் தடுக்க கட்டிடங்களில் உள்ள எரிவாயு, நீர் மற்றும் மின் பயன்பாடுகளை தானாக நிறுத்தக்கூடிய அமைப்புகளை உருவாக்குதல்.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="collapsible" data-aos="fade-right">
+				<input type="checkbox" id="collapsible-head24">
+				<label for="collapsible-head24">4. சமூக திட்டமிடல்<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 40rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
+				<div class="collapsible-text">
+					<ul>
+						<li>நிலப் பயன்பாட்டுத் திட்டமிடல்: பூகம்ப அபாயத்தைக் குறைக்கும் வகையில் நகர்ப்புற வளர்ச்சியைத் திட்டமிடுங்கள், இதில் தவறுதலான கோடுகள் மற்றும் திரவமாதல் வாய்ப்புள்ள பகுதிகளில் கட்டிடங்களைத் தவிர்ப்பது உட்பட.</li>
+						<li>வெளியேற்றும் வழிகள்: வெளியேற்றும் பாதைகள் மற்றும் சமூகங்களுக்கான திட்டங்களை நிறுவுதல், குறிப்பாக அதிக ஆபத்துள்ள பகுதிகளில் உள்ளவை.</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head6">
-			<label for="collapsible-head6">2. Building Design and Construction<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 33.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Retrofitting: Strengthen older buildings that were constructed before modern seismic codes were in place to make them more earthquake-resistant.</li>
-					<li>Flexible Foundations: Use flexible foundation systems and seismic bracing techniques to allow buildings to sway during an earthquake without collapsing.</li>
-				</ul>
+		<div class="last gradient-background">
+			<div class="bottom" style="margin: 0; padding: 0;">
+			<div class="container1">
+				<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
+				<h2>எங்களை தொடர்பு கொள்ள</h2>
+				<input type="text" id="name" name="name" placeholder="முழு பெயர்" required autocomplete="off">
+				<input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
+				<textarea id="message" rows="5" name="message" placeholder="உங்களுக்கு எவ்வாறு உதவலாம்?" required autocomplete="off"></textarea>
+				<button type="submit" style="width: 200px; margin-left: 8rem;">சமர்ப்பிக்கவும்</button>
+				</form>
+				<footer><h6 style="margin-bottom: 0px; text-align: center;">© d-ऐPP 2023</h6></footer>
 			</div>
-		</div>
-
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head7">
-			<label for="collapsible-head7">3. Early Warning Systems<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 38.5rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Seismic Monitoring: Invest in advanced seismic monitoring systems that can detect earthquake activity and provide early warnings.</li>
-					<li>Public Alert Systems: Establish public alert systems that can quickly disseminate earthquake alerts through various channels, such as cell phones and sirens.</li>
-					<li>Building Shut-off Systems: Develop systems that can automatically shut off gas, water, and electrical utilities in buildings to prevent fires and leaks during an earthquake.</li>
-				</ul>
 			</div>
-		</div>
-
-		<div class="collapsible" data-aos="fade-right">
-			<input type="checkbox" id="collapsible-head8">
-			<label for="collapsible-head8">4. Community Planning<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 39rem;"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></label>
-			<div class="collapsible-text">
-				<ul>
-					<li>Land Use Planning: Plan urban development in a way that reduces earthquake risk, including avoiding building on fault lines and liquefaction-prone areas.</li>
-					<li>Evacuation Routes: Establish evacuation routes and plans for communities, particularly those in high-risk areas.</li>
-				</ul>
+			<div class="vl" style="margin-left: 0rem;"></div>
+			<div style="display: flex; flex-direction: column;">
+			<section id="about3" >
+				<h2 style="color: rgb(41, 70, 143); margin-top: 1rem;" >எங்களை பற்றி</h2>
+				<div class="box gradient-background container" style="width: 350px; margin-left: 0;"></div>
+				<p style="margin: 1rem 1rem 1rem 0rem;" data-aos="fade-right">எங்கள் குழு பயனர்களுக்கு பல்வேறு இயற்கை பேரழிவுகள் தொடர்பான தகவல்களை வழங்குவதை நோக்கமாகக் கொண்டுள்ளது, அவற்றின் காரணங்கள், தடுப்பு நுட்பங்கள் மற்றும் எச்சரிக்கை அமைப்புகள் ஆகியவை D-DAY க்கு முன்கூட்டியே தயார் செய்யப்படுகின்றன.
+                    எங்கள் பயன்பாட்டின் மூலம், பேரழிவின் போது எடுக்க வேண்டிய பாதுகாப்பு நடவடிக்கைகளையும் பயனர்களுக்கு வழங்குகிறோம். ஒரு பேரிடருக்கு முன்னும் பின்னும் என்ன செய்ய வேண்டும் என்பதையும் விரிவாகக் கூறியுள்ளோம். இது அருகிலுள்ள மீட்பு மையங்களின் வரைபடத்தையும் வழங்குகிறது. பேரழிவின் போது ஒரு நபர் எதிர்கொள்ளக்கூடிய குறைந்த இணைய இணைப்பு காரணமாக பீதியைத் தவிர்க்க, நாங்கள் ஆஃப்லைன் வரைபட அமைப்பை வழங்கியுள்ளோம்.
+                    நாங்கள் 6 பேர் கொண்ட குழு, இது SIH ஹேக்கத்தானுக்காக உருவாக்கப்பட்ட டெமோ இணையதளம்.</p>
+			</section>
 			</div>
 		</div>
 	</div>
-
-	<div class="last gradient-background">
-		<div class="bottom" style="margin: 0; padding: 0;">
-		  <div class="container1">
-			<form class="form2" action="https://formspree.io/f/myyqdqba" method="POST" data-aos="zoom-in">
-			  <h2>Contact Us</h2>
-			  <input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="off">
-			  <input type="email" id="email" name="email" placeholder="demo@gmail.com" required autocomplete="off">
-			  <textarea id="message" rows="5" name="message" placeholder="How can we help you?" required autocomplete="off"></textarea>
-			  <button type="submit">Submit</button>
-			</form>
-			<footer><h6 style="margin-bottom: 0px; text-align: center;">© d-ऐPP 2023</h6></footer>
-		  </div>
-		</div>
-		<div class="vl"></div>
-		<div style="display: flex; flex-direction: column;">
-		  <section id="about" >
-			<h2 style="color: rgb(41, 70, 143); margin-top: 1rem;" >About Us</h2>
-			<div class="box gradient-background container" style="width: 150px; margin-left: 0;"></div>
-			<p style="margin: 1rem 1rem 1rem 0rem;" data-aos="fade-right">Our team aims to provide the users with information related to various natural disasters including their causes, prevention techniques and warning systems to have everything prepared in advance for the D-DAY. 
-			  Through our application we also provide users with the safety measures that must be taken during the time of disaster. We have also elaborated on what has to be done before and after a disaster. It also provides the mapping of the nearest rescue centers. To avoid panic due to low internet connectivity that a person might face during a disaster we have provided the offline map system. 
-			  We are a team of 6 and this is a demo website developed for the SIH hackathon.</p>
-		  </section>
-		</div>
-	</div>
-
 
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
@@ -434,5 +825,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
 	crossorigin="anonymous"></script>
+
 </body>
 </html>
