@@ -6,8 +6,8 @@ App -> The app is designed to be used as a guidebook in case of a natural disast
 - Basic information about different types of disasters
 - Do's and don’ts during a disaster
 - Rescue helpline contact numbers
-- Map of India with addresses of nearby rescue centers (under development)
-- Link to the website for further information and assistance in case internet's available.
+- Map of India with addresses of nearby rescue centres (under development)
+- Link to the website for further information and assistance in case the internet is available.
 
 Website -> The website provides all of the same information as the app, plus additional resources such as:
 - More detailed information about different types of disasters
@@ -20,4 +20,4 @@ Future Plans -> We plan to add the following features to the project in the futu
 - Notification alerts for upcoming disasters or warnings
 - Forums where people can ask for and offer help during times of adversity
 
-In conclusion This project aims to provide a comprehensive disaster management system that can be used to help people stay safe and informed during natural disasters.
+In conclusion, This project aims to provide a comprehensive disaster management system that can be used to help people stay safe and informed during natural disasters.
