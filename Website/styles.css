@@ -1,0 +1,370 @@
+body{
+    margin: 0px;
+    /* display: grid; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    /* line-height: 50px; */
+    margin-top: 1rem;
+}
+.card1{
+    /* display: inline-flex; */
+    width:100%;
+    height: 100%;
+    overflow: hidden; 
+    position: relative;
+    border: none;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+    border: none;
+    width: 45%;
+    height: 45%;
+    margin: 1rem 2rem 1rem 2rem;
+}
+/* .card-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 2rem;
+} */
+
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-body{
+    width: 100%;
+    height: 100%;
+    top:0;
+    right: -100%;
+    position: absolute;
+    background-color:#adf7f2c1;
+    border-radius: 15px;
+    color: rgb(252, 252, 252);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: 1.5s;
+}
+.card1:hover .card-body{
+    right:0;
+}
+.card-title{
+    text-transform:uppercase;
+    font-size: 1.8rem;
+    /* font-weight:600; */
+    /* margin-left: 0%; */
+    color: rgb(239, 239, 239);
+    text-align: center;
+    margin-right: 0rem;
+}
+
+.info{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-left: 5%;
+    margin: 1rem 1rem;
+}
+.card-btn{
+    color: white;
+    margin-top: 8%;
+    margin-left: 6%;
+    border-radius: 0.5rem;
+    background: black;
+    transition: color 0.3s ease;
+    margin-right: 6%;
+}
+
+
+.dis{
+    height: 450px;
+    width: 200px;
+    border-radius: 2rem;
+    border: none;
+}
+
+/* .gallery{
+    display: flex;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    padding: 1rem;
+    flex: none;
+} */
+
+.overflow{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#about{
+    margin: 2rem 2rem;
+}
+
+.container1{
+    margin: 0;
+}
+
+.container2{
+    text-align: center;
+    margin: -70px 100px 40px 100px;
+}
+
+.container{
+    text-align: center;
+    margin: 50px 300px 40px 0;
+}
+
+.box{
+    width: 10rem;
+    height: 10px;
+    margin: 0.5rem 1rem;
+    text-align: left;
+    /* background-color: #014b84; */
+}
+
+h2{
+    text-align: center;
+    margin: 1rem 0.25rem;
+    /* background-color: rgb(41, 70, 143); */
+}
+
+p{
+    margin: 1rem 1rem;
+    /* text-align: left; */
+}
+
+h5{
+    /* padding: 20px 10px 10px 5rem; */
+    text-align: center;
+    /* display: inline-block; */
+    margin: 1rem 0rem 3rem 0rem;
+    /* position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    right: 9rem; */
+    
+}
+
+.one{
+    text-align: left;
+    margin: 1rem 0rem 2rem;
+}
+
+h1{
+    /* padding: 20px 30px 10px 0rem; */
+    font-size: 10rem;
+    
+    /* text-align: left; */
+    color: black;
+    margin: 1rem 5rem 0.5rem 0;
+    /* position: absolute;
+    left: 2rem; */
+
+}
+
+h6{
+    margin: 1rem 2rem 1rem 1rem;
+    color: white;
+    font-style: italic;
+}
+
+/* header{
+    width: 100%t;
+    background-color: rgb(55, 63, 46);
+} */
+
+.gradient-background{
+    background: linear-gradient(300deg, #adf7f2, #15aaff);
+    background-size: 100% 100%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.gradient-background1{
+    background: linear-gradient(300deg, #2641c2, #01bffd);
+    background-size: 100% 100%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation1 {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+span{
+    font-size: 10rem;
+    text-align: center;
+    margin: 1rem 5rem 0.5rem 0;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+.two{
+    color: rgb(37, 32, 32);
+    font-size: 1rem;
+}
+
+button{
+    border: none;
+}
+
+.butn1{
+    background-image: url("https://cdn.downtoearth.org.in/library/large/2020-07-18/0.43229900_1595054679_assam-floods.jpg");
+    opacity: 65%;
+    margin-right: 9rem;
+    transition: color 0.6s ease;
+}
+
+.butn2{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIypdJI1AeJMaXQVrbtKX6oF_oaRHFTJU42A&usqp=CAU");
+    opacity: 65%;
+    border: none;
+    margin-left: 9rem;
+}
+
+.butn3{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr81ideEkFOmOmQPrd1qURuh-v2d-_UvN0Bw&usqp=CAU");
+    opacity: 65%;
+    border: none;
+    margin-left: 9rem;
+}
+
+.butn4{
+    background-image: url("https://media.istockphoto.com/id/469239302/photo/landslide-in-the-roadway-in-el-salvador.jpg?s=612x612&w=0&k=20&c=wveT9bmJk6r6OPP4muFrAOmidmNBgDu5DRlVCtBWodk=");
+    opacity: 65%;
+    border: none;
+    margin-left: 9rem;
+}
+
+.butn{
+    height: 300px;
+    width: 250px;
+    border-radius: 1rem;
+    margin: 1rem 6.725rem 1rem 6.725rem;
+}
+
+.butn1:hover{
+    color: #ceeaffb2;
+}
+
+.three{
+    font-size: 2rem;
+    color: white;
+    font-style: bold;
+    opacity: 100%;
+}
+
+.bottom{
+    margin-bottom: 0px;
+    text-align: center;
+}
+h6{
+    margin-bottom: 0px;
+}
+
+.gradient-background2{
+    background: linear-gradient(300deg, #d1f4ff, #e3f3ff);
+    background-size: 100% 100%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation1 {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.container1{
+    margin-top: 10px;
+    padding: 1rem 1rem;
+}
+
+.form2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(41, 70, 143); */
+    width: 28rem;
+    margin: 50px 10rem 20px 10px;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+form h2{
+    margin-top: 10px 11rem 1rem;
+    color: black;
+}
+
+form input, form textarea{
+    width: 25rem;
+    margin: 20px 100px 0 20px;
+    border: none;
+    border-radius: 0.6rem;
+    outline: none;
+    padding: 10px;
+}
+
+form button{
+    width: 5rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    color: black;
+    margin: 2rem 11.25rem 2rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0,0,0,0.08);
+}
+
+.last{
+    /* background-color: rgba(179, 233, 255, 0.432); */
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+    width: 72.1rem;
+    margin: 3rem 0 0rem 0;
+}
+
+.vl{
+    height: 550px;
+    width: 1px;
+    background-color: grey;
+    margin: 0 2rem 0rem 0.5rem;
+}
